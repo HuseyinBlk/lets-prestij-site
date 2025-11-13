@@ -1,9 +1,3 @@
-/* =========================================================
-   Project Detail Page JavaScript
-   - Galeri navigasyonu
-   - Thumbnail değiştirme
-   - Responsive davranışlar
-========================================================= */
 
 (function() {
   'use strict';

@@ -1,11 +1,3 @@
-/* =========================================================
-   Let's Prestij - main.js
-   - Navbar: transparan -> scroll ile #1a3c5b
-   - Mobil menü: aç/kapat + nav koyu (nav-force)
-   - Video slider: nav-btn ile içerik/videolar arası geçiş
-   - Reveal-on-scroll: IntersectionObserver ile görünüm animasyonu
-   - Ekstralar: yıl, iç link smooth scroll, ESC ile menü kapatma
-========================================================= */
 
 /* ---------- Yardımcılar ---------- */
 const $ = (sel, scope = document) => scope.querySelector(sel);
@@ -33,9 +25,7 @@ const getNavHeight = () => {
   return 80;
 };
 
-/* =========================================================
-   1) NAVBAR: Scroll'a göre renk değişimi
-========================================================= */
+/*   1) NAVBAR: Scroll'a göre renk değişimi */
 (function navbarScrollColor(){
   if (!nav || !homeSection) return;
 
@@ -82,9 +72,7 @@ const getNavHeight = () => {
   window.addEventListener('scroll', onScroll, { passive: true });
 })();
 
-/* =========================================================
-   2) MOBİL MENÜ: Aç/Kapat + nav'ı koyu yap (nav-force)
-========================================================= */
+   //2) MOBİL MENÜ: Aç/Kapat + nav'ı koyu yap (nav-force)
 (function mobileMenu(){
   if (!menuBtn || !menuPanel || !nav) return;
 
@@ -129,9 +117,7 @@ const getNavHeight = () => {
   });
 })();
 
-/* =========================================================
-   3) VİDEO SLIDER: Nav butonları ile geçiş + Otomatik 5 saniye değişim
-========================================================= */
+   //3) VİDEO SLIDER: Nav butonları ile geçiş + Otomatik 5 saniye değişim
 (function videoSlider(){
   if (!navBtns.length || !slides.length || !contents.length) return;
 
@@ -185,9 +171,7 @@ const getNavHeight = () => {
   startAutoSlide();
 })();
 
-/* =========================================================
-   4) REVEAL-ON-SCROLL: Görünür olunca .in sınıfı ekle
-========================================================= */
+// 4) REVEAL-ON-SCROLL: Görünür olunca .in sınıfı ekle
 (function revealOnScroll(){
   const targets = $$('.reveal');
   if (!targets.length) return;
@@ -204,9 +188,7 @@ const getNavHeight = () => {
   targets.forEach(el => io.observe(el));
 })();
 
-/* =========================================================
-   5) İç linklerde yumuşak kaydırma (örn. #iletisim)
-========================================================= */
+   // 5) İç linklerde yumuşak kaydırma (örn. #iletisim)
 (function smoothAnchors(){
   const anchors = $$('a[href^="#"]');
   anchors.forEach(a => {
@@ -228,9 +210,7 @@ const getNavHeight = () => {
   });
 })();
 
-/* =========================================================
-   6) Footer yılı otomatik
-========================================================= */
+  // 6) Footer yılı otomatik
 (function fillYear(){
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
