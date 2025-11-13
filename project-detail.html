@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Let's Prestij | Proje Detayı</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <section class="navbar-section">
+    <nav>
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/LETS-PRESTİJ.png" alt="logo">
+        </a>
+      </div>
+      <div class="menu-btn"><i class="fa-solid fa-bars"></i></div>
+      <div class="menu">
+        <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="projects.html">Projelerimiz</a></li>
+            <li><a href="nedendonusum.html">Neden Dönüşüm?</a></li>
+            <li><a href="contact.html">İletişim</a></li>
+          </ul>
+      </div>
+    </nav>
+  </section>
+
+  <!-- PROJE DETAY HERO -->
+  <section class="project-detail-hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav aria-label="breadcrumb" class="mb-3">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Ana Sayfa</a></li>
+              <li class="breadcrumb-item"><a href="projects.html">Projeler</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Proje Detayı</li>
+            </ol>
+          </nav>
+          
+          <div class="project-status mb-3">
+            <span class="project-badge badge-completed">
+              <i class="fa-solid fa-check"></i> Tamamlandı
+            </span>
+          </div>
+          
+          <h1 class="project-detail-title">Prestij Sitesi Yenileme</h1>
+          <p class="project-detail-subtitle">
+            <i class="fa-solid fa-location-dot"></i> Kadıköy, İstanbul
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJE GALERİSİ -->
+  <section class="project-gallery py-5">
+    <div class="container">
+      
+      <!-- Ana Galeri -->
+      <div class="gallery-main mb-4">
+        <div class="main-image-container">
+          <img id="main-image" src="assets/images/proje.jpeg" alt="Ana Proje Görseli" class="main-image" onclick="openLightbox()">
+          <div class="gallery-controls">
+            <button class="gallery-btn prev-btn" onclick="changeImage(-1)">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="gallery-btn next-btn" onclick="changeImage(1)">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Lightbox Modal -->
+      <div id="lightbox" class="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+          <img id="lightbox-image" src="" alt="Büyük Görsel" class="lightbox-img">
+          <div class="lightbox-controls">
+            <button class="lightbox-btn lightbox-prev" onclick="changeLightboxImage(-1)">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-btn lightbox-next" onclick="changeLightboxImage(1)">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Thumbnail Galeri -->
+      <div class="gallery-thumbnails">
+        <div class="row g-2">
+          <div class="col-6 col-md-3">
+            <img src="assets/images/proje.jpeg" alt="Proje 1" class="thumbnail active" onclick="setMainImage(this)">
+          </div>
+          <div class="col-6 col-md-3">
+            <img src="assets/images/proje.jpeg" alt="Proje 2" class="thumbnail" onclick="setMainImage(this)">
+          </div>
+          <div class="col-6 col-md-3">
+            <img src="assets/images/proje.jpeg" alt="Proje 3" class="thumbnail" onclick="setMainImage(this)">
+          </div>
+          <div class="col-6 col-md-3">
+            <img src="assets/images/proje.jpeg" alt="Proje 4" class="thumbnail" onclick="setMainImage(this)">
+          </div>
+          <div class="col-6 col-md-3">
+            <img src="assets/images/proje.jpeg" alt="Proje 5" class="thumbnail" onclick="setMainImage(this)">
+          </div>
+          <div class="col-6 col-md-3">
+            <img src="assets/images/proje.jpeg" alt="Proje 6" class="thumbnail" onclick="setMainImage(this)">
+          </div>
+          <div class="col-6 col-md-3">
+            <img src="assets/images/proje.jpeg" alt="Proje 7" class="thumbnail" onclick="setMainImage(this)">
+          </div>
+          <div class="col-6 col-md-3">
+            <img src="assets/images/proje.jpeg" alt="Proje 8" class="thumbnail" onclick="setMainImage(this)">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJE DETAYLARI -->
+  <section class="project-details py-5">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Sol: Proje Açıklaması -->
+        <div class="col-12 col-lg-8">
+          <div class="project-content">
+            <h3>Proje Hakkında</h3>
+            <p>
+              Prestij Sitesi Yenileme projesi, Kadıköy'ün merkezi konumunda bulunan eski bir binanın 
+              modern yaşam standartlarına uygun hale getirilmesi için gerçekleştirilmiştir. Bu kapsamlı 
+              kentsel dönüşüm projesi ile 40 yıllık eski yapı tamamen yenilenerek 24 adet modern daireye 
+              sahip yeni bir yaşam alanı oluşturulmuştur.
+            </p>
+            
+            <h4>Proje Özellikleri</h4>
+            <ul class="project-features">
+              <li><i class="fa-solid fa-check"></i> Depreme dayanıklı betonarme yapı</li>
+              <li><i class="fa-solid fa-check"></i> Enerji verimli ısıtma sistemi</li>
+              <li><i class="fa-solid fa-check"></i> Modern asansör sistemi</li>
+              <li><i class="fa-solid fa-check"></i> Güvenlik kamera sistemi</li>
+              <li><i class="fa-solid fa-check"></i> Otopark alanları</li>
+              <li><i class="fa-solid fa-check"></i> Peyzaj düzenlemesi</li>
+            </ul>
+            
+            <h4>Süreç Detayları</h4>
+            <p>
+              Proje süreci 16 ay boyunca devam etmiş ve bu süreçte eski yapının güvenli bir şekilde 
+              yıkımı, yeni temel atımı, betonarme yapı inşaatı, iç ve dış mekan tamamlamaları 
+              gerçekleştirilmiştir. Tüm süreç boyunca çevreye minimum zarar verilmesi için özel 
+              önlemler alınmıştır.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Sağ: Teknik Bilgiler -->
+        <div class="col-12 col-lg-4">
+          <div class="technical-specs">
+            <h4>Teknik Bilgiler</h4>
+            <div class="spec-item">
+              <span class="spec-label">Başlangıç Tarihi:</span>
+              <span class="spec-value">Mart 2023</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Tamamlanma Tarihi:</span>
+              <span class="spec-value">Temmuz 2024</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Toplam Alan:</span>
+              <span class="spec-value">2,500 m²</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Daire Sayısı:</span>
+              <span class="spec-value">24 Daire</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Kat Sayısı:</span>
+              <span class="spec-value">6 Kat</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Proje Durumu:</span>
+              <span class="spec-value">Tamamlandı</span>
+            </div>
+            
+            <div class="contact-card mt-4">
+              <h5>Proje Hakkında Bilgi</h5>
+              <p>Bu proje hakkında daha detaylı bilgi almak için bizimle iletişime geçin.</p>
+              <a href="index.html#iletisim" class="btn contact-btn">
+                <i class="fa-solid fa-phone me-2"></i>İletişime Geç
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJE ÖZET -->
+  <section class="project-summary py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="project-summary-content">
+            <h3>Proje Özeti</h3>
+            <p>
+              Modern yaşam standartlarını karşılayan, depreme dayanıklı ve enerji verimli bir kentsel dönüşüm projesi. 
+              Bu proje ile eski yapı tamamen yenilenerek modern bir yaşam alanına dönüştürülmüştür.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENZER PROJELER -->
+  <section class="similar-projects py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Benzer Projeler</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/images/proje.jpeg" alt="Modern Yaşam Konutları">
+              <div class="project-badge badge-ongoing">
+                <i class="fa-solid fa-hammer"></i> Devam Ediyor
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Modern Yaşam Konutları</h3>
+              <p class="project-location"><i class="fa-solid fa-location-dot"></i> Ataşehir, İstanbul</p>
+              <a href="project-detail.html" class="project-btn">Detayları Gör</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/images/proje.jpeg" alt="Bahçeşehir Rezidans">
+              <div class="project-badge badge-completed">
+                <i class="fa-solid fa-check"></i> Tamamlandı
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Bahçeşehir Rezidans</h3>
+              <p class="project-location"><i class="fa-solid fa-location-dot"></i> Bahçeşehir, İstanbul</p>
+              <a href="project-detail.html" class="project-btn">Detayları Gör</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/images/proje.jpeg" alt="Yenişehir Evleri">
+              <div class="project-badge badge-completed">
+                <i class="fa-solid fa-check"></i> Tamamlandı
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Yenişehir Evleri</h3>
+              <p class="project-location"><i class="fa-solid fa-location-dot"></i> Üsküdar, İstanbul</p>
+              <a href="project-detail.html" class="project-btn">Detayları Gör</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="site-footer" class="mt-5">
+    <div class="footer-cta">
+      <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-3">
+        <div class="cta-text">
+          <h3>Projeni birlikte güvenle hayata geçirelim.</h3>
+          <p>40 yıllık yerel tecrübe, 20+ yıllık inşaat birikimi.</p>
+        </div>
+        <div class="cta-actions d-flex gap-2">
+          <a href="index.html#iletisim" class="btn cta-btn cta-primary"><i class="fa-solid fa-file-signature me-2"></i>Teklif Al</a>
+          <a href="tel:+905376969434" class="btn cta-btn cta-outline"><i class="fa-solid fa-phone me-2"></i>Bizi Arayın</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-main">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-12 col-lg-5">
+            <div class="footer-brand text-center">
+              <img src="assets/images/LETS-PRESTİJ.png" alt="Let's Prestij"/>
+              <p class="mt-2">Let's Prestij, 40 yıllık yerel esnaf kökleri ve 20 yılı aşkın inşaat deneyimiyle kentsel dönüşüm projelerini uçtan uca yönetir. Güven, şeffaflık ve mühendislik kalitesi.</p>
+              <div class="socials">
+                <a href="https://wa.me/905376969434" target="_blank" rel="noreferrer noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/letsprestij" target="_blank" rel="noreferrer noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/letsprestij" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <h4 class="footer-title">Bağlantılar</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Ana Sayfa</a></li>
+              <li><a href="index.html#biz-kimiz">Hakkımızda</a></li>
+              <li><a href="projects.html">Projeler</a></li>
+              <li><a href="contact.html">İletişim</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-lg-4">
+            <h4 class="footer-title">İletişim</h4>
+            <ul class="footer-contact">
+              <li><i class="fa-solid fa-location-dot"></i> Kadıköy / İstanbul</li>
+              <li><i class="fa-solid fa-phone"></i> <a href="tel:+905376969434">+90 537 696 94 34</a></li>
+              <li><i class="fa-solid fa-envelope"></i> <a href="mailto:info@letsprestij.com">info@letsprestij.com</a></li>
+              <li><i class="fa-regular fa-clock"></i> Pzt–Cmt: 09.00–19.00</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container d-flex flex-column flex-sm-row align-items-center justify-content-between gap-2">
+        <p class="m-0">© <span id="year"></span> Let's Prestij. Tüm hakları saklıdır.</p>
+        <a href="#" class="to-top" aria-label="Yukarı çık"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/project-detail.js"></script>
+</body>
+</html>
